@@ -1,0 +1,21 @@
+@import "./var.less";
+
+html{
+    color: @words;
+    font-family: '微软雅黑';
+    overflow: hidden;
+}
+
+body{
+    overflow:hidden;
+    margin:0;
+}
+
+a {
+    //影响全居的样式，a标签一般都会去掉默认样式
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        color: @success;
+    }
+}

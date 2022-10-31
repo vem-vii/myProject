@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>
+    </title>
+</head>
+
+<body>
+    <noscript>
+        <strong>
+            We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+                Please enable it to continue.
+        </strong>
+    </noscript>
+    <div id="app">
+        <style>
+            .loading-img {
+                position: fixed;
+                width: 200px;
+                height: 200px;
+                left: 50%;
+                top: 50%;
+                margin-top: -100px;
+                margin-left: -100px;
+            }
+        </style>
+        <img class="loading-img" src="./img/loading.gif" alt="">
+    </div>
+
+    <!-- ref cdn -->
+    <!--vue-config 不直接引入的资源在cdn资源中直接引入 -->
+    <!-- 开发环境中不需要引入下面这些内容 会被html-webpack-plugin 读取打包-->
+
+    <!-- 判断 如果是生产环境则放入一下代码 -->
+    <!-- <% if(NODE_ENV==="production" ) { %>
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.40/vue.global.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/vuex/4.0.2/vuex.global.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue-router/4.1.5/vue-router.global.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.1.2/axios.min.js"></script>
+
+        <% } %> -->
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
